@@ -1,0 +1,2919 @@
+Syllabus Of C++
+Unit1:
+> Programming paradism
+  a. monolythic
+  b. procedural oriented
+  c. structured oriented
+  d. object oriented
+> Introduction to C++
+> C++ is super set of C
+> What is the difference b/w c and C++
+> Required Software
+> Required header files
+> C++ source file structure
+> main() function
+> Hello World program
+> cout vs cin
+> datatypes
+> variable
+> way of initialization
+  a. datatype var=value;
+  b. datatype var = datatype(value);
+  c. datatype * var = new datatype;
+  d. datatype * var = new datatype(value)
+> refernece variable
+> Working of new keyword
+> c++ operator    
+> control flow
+  a. if else
+  b. switch
+  c. loop
+  d. goto
+  e. break
+  f. continue
+> Review Questions
+> Practice examples
+
+Unit2:
+> Function
+  a. non-member function
+  b. default parameter
+  c. call by value vs call by address vs call by reference
+  d. function returning reference
+  e. inline function
+  f. function template
+
+> function overloading
+> preventing name mangling (extern "C")
+> Review Questions
+> Practice examples
+  
+Unit3:
+> class
+> object
+> member vs non-member
+> member function implementation inside class vs outside class
+> static member vs non-static member
+> local variable vs global variable
+> static data member vs non-static data members
+> member ship operator vs indirection operator
+> scope resolution operator
+> accessing class members
+  a. using object
+  b. using pointer
+
+> access specifiers
+  a. private
+  b. protected 
+  c. public
+> constructor vs destructor
+> member initializer list
+> way of initializing const and reference type of data members
+> empty class 
+> difference b/w structure and class
+> accessing 
+> constant function vs constant object
+> friend declaration
+  a. friend non-member function
+  b. friend member function
+  c. friend class
+
+> Pointers
+> Array
+> String
+> new vs delete operator
+> new vs malloc()
+> delete vs free()
+> creating array using new
+> passing object as a argument
+  a. call by value
+  b. call by address
+  c. call by reference
+> this pointer
+> types of constructor
+> constructor overloading
+> copy constructor
+> constructor with default parameter
+> name less object
+> dynamic initialization through constructor
+> constructors for 2d arrays
+> constant object vs constructor
+> static data members with constructors and destructors
+> nested classes
+> Review Questions
+> Practice examples
+
+Unit4: Pointer vs object
+> pointers to object
+> live objects
+> array of objects
+> array of pointers to object
+> pointers to object members
+> self referential class
+> guidlines for passing object parameters
+> Review Questions
+> Practice examples
+
+Unit5: Operator overloading
+> introduction
+> overloadable operators
+> unary operator overloading
+> operator keyword
+> operator return values
+> nameless temporary objects
+> limitation of increment and decrement operators
+> binary operator overloading
+> arithmetic operator overloading
+> relational operator overloading
+> concatenation of strings
+> comparison between basic datatype
+> conversion b/w objects and basic types
+> conversion b/w objects of different class
+> subscript operator overloading
+> assignment operator overloading
+> = operator overloading vs copy constructor
+> overloading an operator using friend function
+> tracing memory leaks
+> niceties of operator overloading and conversions
+> Review Questions
+> Practice examples
+
+Unit6: Inheritance
+> IS-A vs HAS-A relationship
+> introduction
+> class revisited
+> derived class declaration
+> Forms of inheritance
+> Inheritance and Member accessibility
+> constructors in derived classes
+> destructor in derived class
+> child object vs delete
+> constructors invocation and data members initialization
+> overloaded member functions
+> abstract classes
+> multilevel inheritance
+> multiple inheritance
+> hierarchical inheritance
+> multipath inheritance and virtual base classes
+> hybrid inheritance
+> object composition-delegation
+> advantage of inheritance
+> cost of inheritance
+> Review Questions
+> Practice examples
+
+Unit7: Virtual functions
+> introduction
+> need of virtual functions
+> pointer to derived class objects
+> definition of virtual function
+> array of pointers to base class objects
+> pure virtual functions
+> abstract classes
+> virtual destructor
+> how is dynamic binding achieved
+> rules for virtual functions
+> Review Questions
+> Practice examples
+
+Unit8: Generic Programming with template 
+> Introduction
+> fucntion templates
+> overloaded fucntion templates
+> Nesting of fucntion calls
+> Multiple arguments fucntion template
+> user define template arguments
+> class templates
+> Inheritance of class template
+> class template containership
+> class template with overloaded operator
+> Review Questions
+> Practice examples
+
+Unit9: Console Streams
+> what are streams?
+> predefine console streams
+> hierarchy of console stream classes
+> unformatted I/O operations
+> formateted I/O operations
+> manipulators
+> custom/user defined manipulators
+> streams operator with user defined classes
+> Review Questions
+> Practice examples
+
+Unit10: File Streams
+> introduction
+> hierarchy of file stream classes
+> Opening and closing of files
+> testing for errors
+> file modes
+> file pointers and their manipulations
+> sequential access to a file
+> ASCII and binary files
+> saving and retrieving of objects
+> file i/o with fstream class
+> random access to a file
+> In-memory buffers and data formatting
+> Error handling during file manipulations
+> Filter utilities
+> Review Questions
+> Practice examples
+
+Unit11: Exception Handling
+> Introduction
+> Error Handling
+> Exception handling model
+> exception handling constructs
+> Handler throwing the same exception again
+> list of exceptions
+> catch all exceptions
+> exceptions in constructors and destructors
+> handling uncaught exceptions
+> exceptions in operator overloaded fucntions
+> exceptions in inheritance tree
+> exceptions in class templates
+> rules for exception handling successfully.
+> Review Questions
+> Practice examples
+
+Programming Methodology:
+------------------------
+> There are several programming paradism available in the market for developing programming language.
+
+Some popular programming paradism/methodology:
+a. Monolythic (1950)
+   Ex: Assembally, Basic
+b. Procedural Oriented (1960)
+   Ex: Cobol
+c. Structure oriented (1970)
+   Ex: C
+d. Object oriented programming 
+   Ex: C++, Java,
+  
+Monolythic Programming Language:
+> In this case the whole code directly placed inside source file
+> If same logics want to executes n times then it should be physical written n times.
+
+Disadvantage:
+> code reusability is not their
+> readability of the code going to be down
+> maintenance becomes complex
+> Parallal development is not possible
+
+Procedural Oriented Programming language:
+fact()
+{
+  s1;
+  s2;
+  s3;
+}
+........
+fact();
+........
+fact();
+
+Structured Oriented:
+a. Local: within a function
+b. Global: any function
+
+data=> variable
+logic => function
+
+Banking.prj (1975)-File
+------------------------------------------------------
+employee			customer
+  eid,ename,salary		  accno,cname,balance
+  payslip()			  diposit()
+  calPF()			  withd()
+  calDA()			  lastfivemonth()
+  getemp()			  getPrevious()
+
+Banking.prj(c++)-object oriented language  
+------------------------------------------------------
+class employee		     class customer
+{			     {
+  private: eid,ename,salary	 private:accno,cname,balance	
+  payslip()			  diposit()
+  calPF()			  withd()
+  calDA()			  lastfivemonth()
+  getemp(){}			  getPrevious()
+}                            }
+ 
+
+sturctured:
+abs(int)-int
+labs(long)-long
+fabs(float) 
+
+Object Oriented: polymorphism(overloading)
+abs(int)-int
+abs(long)-long
+abs(float)-float
+
+Introduction of C++:
+> C++ is a high level, object oriented, block structured programming language invented 
+by BJarne Stroustrup in AT&T bell laboteries.
+
+> C++ is a super set of C.
+
+What is the difference b/w C and C++?
+C			C++
+------------------------------------------------------
+structure oriented	Object oriented
+
+class is not allowed	Class is allowed
+
+inside  structure 	inside structure we can provide
+function declaration	variable declaration as well as
+is not allowed		function declaration
+
+supports top to bottom	supports bottom to up approach	 
+approach
+
+default parameter 	default parameter declaration 
+declaration is not	is allowed
+allowed
+
+friend declaration	friend declaration is allowed
+is not allowed
+
+inline function is 	inline function declaration
+not allowed		is allowed
+
+c doesnt support 	c++ supports refernce variable
+reference variable
+
+functions cant be 	function can be constant
+constant
+
+exception handling is   exception handling is possible
+not there
+
+Source file:
+> extension should be .cpp
+> execution starts from main() function
+  void main(){}
+  int main(){} //recommended
+
+Structure:
+1. comments
+2. Header file inclusion
+3. macro declaration
+4. global variable declaration
+5. class declaration
+6. main() function
+7. class declaration
+
+Frist C++ program(Hello World! program in c++)
+P1.cpp
+----------------------------
+#include<iostream.h>
+//#include<iostream>
+
+int main()
+{
+   cout<<"Hello World!";
+   return 0;
+}
+
+cout vs cin:
+
+Working of cout:
+> cout is a ready made (predefine) object of ostream_withassign class which is derived from ostream class
+
+> cout is an output stream(buffer) which is pre connected with console device monitor.
+
+> By using cout object we can call functions of ostream class.
+
+>>():
+> It is pre over loaded operator which is provided by 
+> By using >>() overloaded operator we can write/print any type of value on the current buffer.
+
+Note: by using combinition of cout and << operator we can display any value/message on the monitor
+  printf() = cout + <<
+  printf() = cout<<"...";
+
+  int x = 10;
+  printf("%d",x);
+  cout<<x;
+
+  printf("%d%d%d",10,20,30);
+  cout<<10<<20<<30;
+
+  printf("%d %d %d\n",10,20,30);
+  cout<<10<<" "<<20<<" "<<30;
+  cout<<10<<2.5<<"hello"<<'x'<<"\n";
+  cout<<10<<2.5<<"hello"<<'x'<<endl;
+
+  cout<<expr1<<expr2;
+ 
+  cout<<printf("A")<<printf("BB");
+  cout<<printf("A")<<2;
+  cout<<1<<2;
+  output: BBA12
+
+  int a = 10;
+  cout<<++a<<" "<<++a<<" "<<++a<<endl;
+  cout<<++a<<endl<<++a<<endl<<++a<<endl;
+ 
+  cout<<13<<12<<11; a = 10,11,12,13
+  output: 131211
+
+Working with cin:
+> it is ready made object of istream_withassign(istream) class.
+
+> it is ready made buffer/stream which is pre connected with keyboard.  
+
+> by using cin we can call input function(ex: >>())
+Example:
+int x;
+c: scanf("%d",&x);
+c++:  cin>>x;
+
+int x,y,z;
+scanf("%d",&x); => cin>>x;
+scanf("%d",&y); => cin>>y;
+scanf("%d",&z); => cin>>z;
+
+scanf("%d%d%d",&x,&y,&z);  => cin>>x>>y>>z;
+
+int x=10,y=10,z=10;
+
+scanf("%d",&x);    =>   cin>>x;
+Types of variables:
+> Based on types of stored contents variables are divided into three categories
+a. primitive variable
+   datatype name = value;
+b. pointer variable
+   datatype * name = address;
+c. reference variable
+   datatype & name = variable;
+   datatype & name;  invalid
+
+
+Reference Variable (new):
+-------------------------
+syntax:
+   datatype & name = variable;
+> In c++ reference variable acts like an alias name of the existing variable.
+
+> Reference variable is nothing but it is implicit constant pointer.
+  Ex:   int x = 10;
+        int & r = x;  
+        The above statement implicitly converted by the compiler as follows
+        int& r = x;  => int * const r = &x;
+
+> There is no need of explicit dereferencing operations upon a reference variables. Because it 
+is automatically dereferenced by the compiler.
+    ref  =>  *ref
+> In c++ we must initialize const variable at the time of declaration, as we known reference
+ variable is also constant pointer therefore we must initialize reference variable at the of 
+declarations by using variables.
+   Ex:
+     int x = 10;
+     
+     int& r = 10;  => int * const r = 10; => invalid: Warn
+     int& r = &x;  => int * const r = & &x; => invalid: err
+     int& r = x;   => int * const r = &x;
+Q: Is it allow to create a reference of reference variable?
+   Ex:  int x = 10;
+        int& p = x;  valid
+        int& q = p;  valid
+
+> we cant create reference of pointer variable
+  Ex: 
+  int x = 10;
+  int* px = &x;
+  int& ref = px; => int * const ref = &px;
+  CError
+
+> Array of reference is not allowed
+  int& a[5]; invalid
+
+Reference vs function:
+----------------------
+1. A function returning reference:
+  datatype & m1() => datatype * const m1()
+  {
+    datatype var;
+    .........
+    return var;  => return &var;
+  }
+
+  m1();  => *m1();
+> Function should not return a reference of local(auto)   variable.
+  int& m1()
+  {
+     int x=10;
+     return x;  invalid
+  }
+> Any function can return reference of global or local static variables.
+  int& m1()
+  {
+     static int x=10;
+     return x;  valid
+  }
+  int x = 10;
+  int& m1()
+  { 
+     return x;  valid
+  }
+
+How many way of function calling?
+1. call by value
+2. call by address/pointer
+3. call by reference
+
+
+void m1(int * p)
+{
+
+}
+case1: call by value
+   int x = 10;
+   int* ptr = &x;
+   m1(ptr);   //m1(100);
+case2: call by address/pointer
+   int x = 10; 
+   m1(&x);  => m1(100);
+
+Call by reference:
+Actual code:
+   void fun(int& ref)
+   {
+
+   }
+   ........
+   int x = 10;
+   fun(x);
+
+converted code:
+   void fun(int* const ref)  //int const*  ref = &x
+   {
+
+   }   ........
+   int x = 10;
+   fun(&x);
+
+> constant refernce
+> reference to array
+> difference b/w reference and pointer
+> reference?
+> pointer?
+
+Constant reference:
+> based on requirement we can declare a reference variable as a constant by using const keyword.
+  const int x = 10;
+  int& r = x;    
+  x = 10;   invalid
+  r = 10;   valid
+
+> if you want to create reference of constant variable then 
+  this reference should be declared constant explicitly.
+Reference to an array:
+> As we know  array of reference is not allowed
+  int& a[5];  invalid
+> In c++ we can create reference to an array
+  datatype a[size] = {...};
+  datatype (&r)[size] = a;
+  datatype (* const r)[size]=a;
+
+Example:
+#include<stdio.h>
+#include<conio.h>
+#include<iostream.h>
+void main()
+{
+  int a[5] = {10,20,30,40,50};
+  int (&r)[5] = a;     a[i] <=> r[i]
+  r[0]=1;
+  a[1]=2;
+  printf("%d %d\n",a[0],a[1]);
+  printf("%d %d\n",r[0],r[1]);
+}
+
+int a[5],b[5];
+int (&r)[5] = a;
+ => int (* const r)[5] = a;
+
+What is the difference b/w reference and pointer?
+     pointer			reference
+------------------------------------------------------------
+> datatype * ptr = &var;	>datatype & r = var;
+
+> pointer can point different   >reference cant pointer 
+  -different variables           different-different
+  (location)			 variable(locations)
+
+> pointer arithmetics are 	>reference(address) arith-
+  possible			metics are not allowed
+
+> deferencing should be  	> auto deferencing is 
+  explicitly required		 performed by the compiler
+ 
+
+Possible implicit conversion in order to reference variables
+------------------------------------------------------
+case1:
+int& r = x;	=> int * const r = &x;
+
+case2:
+r		=> *r
+
+case3:
+int& m1()	=> int * const m1()
+{		   {
+  return x;		return &x;
+}                  }
+
+m1();		=> *m1();
+
+case4:
+void m1(int & x) => void m1(int * const x)
+{		    {
+
+}		    }
+
+m1(a);		    m1(&a);
+
+case5:
+int (&r)[5] = a;   => int (* const r)[5] = a;
+
+Q: In which case reference cant be  replaced by pointer?
+Ans: whenever overloaded operator wants to pass its argument as call by  address then
+ it is not possible by using pointer, in this overloaded operator parameter declaration 
+should be reference.
+
+Example:
+void operator +(Point& a,Point& b)  => 4bytes
+{
+}
+
+Point p,q; =>80bytes
+    &p + &q  => +(&p,&q)
+
+Why call by reference?
+
+What is the use of constant reference variable?
+
+Why pointer?
+> To perform pointer arithmetics
+> To point different-2 memory locations
+
+How many of variable declarations?
+case1:
+  datatype var = value;
+case2:
+  datatype var = datatype(value);  
+ //primitive type => instrick type
+  int x = int(10);  => int x = 10
+case3:
+  int * p = new int;
+  int * p = new int[5];
+
+Working of new and delete(Dynamic Memory Allocation):
+
+Working of new:
+> new is a keyword in c++.
+> new is an operator in c++.
+> By using new we can allocate memory space for any type dynamically inside heap area
+> There is no need of explicit typecasting
+> There is no need of size information
+> In case of new keyword default value of allocated memory is garbage.
+> By using new keyword we also perform explicit initialization at the time of memory 
+allocation.
+  syntax:
+    datatype * ptr = new datatype;
+    datatype * ptr = new datatype(value);
+> By using new keyword we also create object of any class dynamically.
+
+> By using new keyword we can create an array dynamically.
+  datatype * a = new datatype[size];
+
+Working of delete:
+> delete is also operator
+> by using delete operator we can perform memory deallocation which is allocated by 
+  using new keyword.
+  delete ptr;
+  delete ptr[];
+
+> In c++ declarations(variable/function ...) can be provided anywhere in the program. 
+  void main()
+  {
+    int x = 10;
+    cout<<x;
+    clrscr();
+    int y = 20;  valid
+  }
+> Operators:
+  Same as C language
+> Control flow statement:
+  Same as C language
+
+> for loop vs declaration:
+
+void main()
+{
+  ..........
+  for(int i = 0;cond;inc)
+  {
+    int j = 0;
+    .......
+  }
+  cout<<j;   invalid
+  cout<<i;   valid
+  ..........
+}
+
+Function:
+> 
+
+int x;  //non-member
+void m1() //non-member function
+{
+}
+class Point
+{
+  int y; //member of Point
+  void m2() //member of Point
+  {
+
+  }
+};
+
+> C++ supports member function as well as non-member function.
+
+Member function:
+> any function declared inside class known as member function
+
+Non-Member function:
+> Any function declared outside class known as non-member function.
+
+> Non-member function can be directly accessed inside anywhere in the program
+
+Default parameter list:
+> In C++ we have to default to provide default value of function parameters
+Case1:
+  void m1(int x,int y)
+  {
+
+  }
+  ........
+  m1(10,20);   valid
+  m1();        invalid
+  m1(10);      invalid
+
+Case2:
+  void m1(int x=1,int y=2)
+  {
+    cout<<x<<y;
+  }
+  ........
+  m1(10,20);   valid : 10 20
+  m1();        valid : 1 2
+  m1(10);      valid : 10 2
+
+> Default parameter value should be provided contiguously from right to left direction.
+case1:  invalid
+  void m1(int x=10,int y)   invalid
+  {
+
+  }
+case2:  valid
+  void m1(int x,int y=0){}
+  m1();  invalid
+  m1(10);  valid: 10 0
+case3: Invalid
+  void m1(int a,int b=0,int c){}
+case4: valid
+  void m1(int a,int b=0,int c=0){}
+case5: invalid
+  void m1(int a=0,int b,int c=0){}
+
+> default parameter initializer list is not allowed to array declaration
+case6:
+  void m1(int a[]={10,20,30,40,50}){} invalid
+  because parameter a is converted as pointer declaration
+  void m1(int* a = {10,20,30,40,50}){}
+
+  void m1(int a[]=NULL){}  Valid
+  equivalent: void m1(int * a = NULL)
+case7: Valid
+  void m1(char ch='A',int x = 0)
+  {
+  }
+
+case8:  invalid
+  void m1(int& x = 0)
+  {
+ 
+  }
+case9:  valid
+  int x = 10;
+  void m1(int& r = x){}
+Example:  
+  int add(int,int);
+  void main()
+  {
+    add(10,20);
+  }
+  int add(int x,int y)
+  {
+
+  }
+> For any function if declaration and definition is available seperatly then before function calling statement we should provided default value.
+Note: default value should be  provided at the time of function declaration.
+   void m1(int=0,int=0);
+   void m1(int x=0,int y=0);
+> Default value for function parameter can be possible only once either declaration time
+  or definition time.
+  void m1(int=0);
+  void m1(int x=10)   invalid
+  {
+  }
+> default parameters can be initialized of object type or array type.
+
+inline function:
+> inline is a keyword
+> by using inline keyword we mark a function as inline.
+  inline datatype fun(...){}
+> the main advantage of making a function as inline to reduce the control switching 
+  during function calling
+
+> In case of inline function execution control will not send from calling function to called function
+Note: some c++ compiler may not support inline function.
+
+> If we are providing inline function declaration still there is no guarantee of that 
+ function is treated as inline.
+
+Restrictions upon an inline function:
+> you should place less code inside body of inline. if inline containing complex logics or length of function body is going to be increased then there is no guarantee of function is interpreted as inline
+
+> if function body having a loop then function is not treated as inline
+
+> if function having recursive/cyclic function callings then function is not treated as inline
+
+> By default all member functions expanded as inline if definition(body) of that member function is also present inside class.
+Example:
+class point
+{
+  int x;
+  void m1()  //by default inline
+  {
+	 while(1);
+  }
+  void m2();
+};
+void point::m2() //by default not inline
+{
+  while(1);
+}
+> It is highly recommended to declare a function as inline.
+
+
+Function Overloading:
+> In c++ we can overload any function any number  of times.
+> If multiple function having same names but different parameter list known as overloaded function. Where parameter list may be differs in order to
+a. types of parameter
+   case1:
+     void m1(int x){}
+     void m1(float x){}  valid
+   case2:
+     void m1(int x){}
+     void m1(int y){}    invalid
+   case3: return type doesnt affects overloading
+      void m1(int x){}
+      int m1(int x){}
+b. number of parameter
+   void m1(int x){}
+   void m1(int x,int y){}
+c. order of parameter
+   void m1(int x,float y){}
+   void m1(float x,int y){}
+   m1(10,2.5f); -first
+   m1(2.5,10);  -second
+
+Need of Encapsulation:
+----------------------
+> encapsulation is a process of binding access permission of data(variable) to its 
+  related methods.
+
+> encapsulation is a concept of oops.
+> main advantage of encapsulation is a data security.
+
+Working with class (Imp):
+> class is an user define abstract data type.
+  
+> Class is a way of grouping data and methods as single entity.
+
+> class is an implementation of encapsulation.
+
+> Class is a process of binding access permission of data members to its related member function/methods/operations /behaviour.
+
+  Boy rahul,ramesh;
+  Player sachin,sehwag,virat;
+  Bike pulsar;
+  Employee raju;
+  Vehicle swift;
+  Actress katriena,karina,alia;
+> Class is a logical representation of an object. 
+
+> Class is a blue-print of an object. 
+
+> Class declaration can be provided by using class keyword.
+syntax:
+  class Classname
+  {
+    private:
+      ...........
+    protected:
+      ...........
+    public:
+      ........... 
+  };
+  class Classname
+  {
+    variables;
+    methods;
+  };
+> Body of class can be empty, size of empty class is 1byte.
+Example:
+  class Point
+  {
+
+  };
+> variable declared inside body of class cant be initialized at time of class 
+  declarations.
+  class Point
+  {
+    int  x = 10;  invalid
+    int  y = 20;
+  };
+  class Point
+  {
+    int x,y;  valid
+  };
+
+> class declaration should be end by semicolon.
+> we cant access class members directly.
+> To access the member of class compulsory we must use either object of that class or class name.
+
+What is object?
+---------------
+Purpose of the object:
+1. var-allocation to store the data
+2. to access the member the class
+
+Definition:
+> object is an instance(physical representation) of class.
+> object is a physical representation of class.
+> Object is responsible for providing the real services.
+
+What is the purpose of object creation?
+> Creating an object is nothing but it is a process of allocating memory space for data member(non-static variable) of the class.
+
+
+Types of object:
+Based on changeable behaviour(state) of the object, there are two types of object
+a. Mutable object
+b. Immutable Object
+
+Mutable object:
+> We can change state of mutable object.
+> If any object does allow to change their state known as mutable objects.
+  ie. Animal,Person 
+
+Immutable:
+> We cant change state of immutable object.
+> If any object doesnt allow to change their  state known as immutable objects.
+  AccountType: saving,current, Buildings
+
+What is SBI property of an object?
+S-> State(same/diff)     (variable)
+B-> Behaviour(same) (methods)
+I-> Identity(different)  (address)
+ 
+Note: Two objects of same type always uniquely identified based on identity of objects.
+
+Note: State of objects may be same or different
+Note: identity of two objects always different
+Note: Behaviour of two objects of same class is always same.
+
+Note: Inside object memory is allocated for storing state of the object. inside object memory is never allocated for storing behaviour(function) of the object.
+
+Syntax:
+Static Allocation:
+  Classname obj;
+  Classname obj = {arg1,arg2...}; //not recommended
+  Classname obj(arg1,arg2...);
+  Classname obj = Classname(arg1,arg2...)
+  Classname obj = Classname();
+  Classname(arg1,arg2);  --anonymous object(mostly)
+Dynamic allocation:
+  Classname * ptr = new Classname;
+  Classname * ptr = new Classname();
+  Classname * ptr = new Classname(arg1,arg2);
+  Classname * ptr =(Classname)malloc(sizeof(classname));
+
+What is difference b/w given declaration?
+  Point p();  or  Point p=Point();
+
+> We cant access member of any class directly without object.
+
+Rules for creating rule:
+> any class may have three types of declaration section
+  a. private section:
+     > private member of any class can be accessed within a current class only.
+     > default type is also private
+  b. protected section:
+     > protected members can be either within a current class or inside their child class.
+  c. public:
+     > public members can be accessed inside any class or any function.
+  Note1: private, protected, public sections can be provided in any order, but it is recommended to follow given order
+    private < protected < public
+
+Types of declarations(Imp):
+There are two types of declarations are possible in c++
+1. Member Declaration:
+   > Any declaration (variable/function) provided inside body of class known as member declaration
+     class Point
+     {
+        int x; //x is a member of point
+        void m1() //m1() is member of point
+        {
+          ....
+        }
+     };
+     class demo
+     {
+        int x;  //x is a member of demo
+     }
+
+2. Non-member declaration:
+   > Any declaration (variable/function) provided outside body of class known as non-member declaration.
+   int x;  //non member
+   void m1() //non member
+   {
+
+   }
+
+There are two types of member declarations supported by C++
+1. static member / class member
+2. non-static member / instance member / object members
+
+Non-Static Member or Instance member:
+-------------------------------------
+> Any declaratioin provided inside body of class without using static keyword known as non-static declaration
+
+> non-static members also known as instance member.
+  Ex:
+  class point
+  {
+    int x; //non-static variable
+    void m1() //m1 is non-static member function
+    {
+
+    }
+  }
+> All global declaration comes under the category of non-member declarations.
+
+What is the way of accessing non-member declaration?
+Ans: Global declaration can be directly accessed anywhere in the program. We can also access global variable declarations by using scope resolution operator (::).
+  int x = 10;
+  void main()
+  {
+    int x = 20;
+    cout<<x;   //20
+    cout<<::x;  //10
+  }
+Working of scope resolution operator (SRO):
+> We can access global declarations explicitly
+> We can access static member of the class
+  classname::static_member
+
+How many way of accessing static members of the class?
+> There are two way
+a. using class name
+   classname::static_member
+b. using object
+   object.static_member
+Note: Within a class static members can be directly accessed
+
+Example:
+  class point
+  {
+     public:
+       static int x;     //static data members
+       static void m1()  //static method
+       {
+
+       }
+  };
+  void main()
+  {
+    cout<<point::x;
+    point::m1();
+    //cout<<point.x;
+    //point.m1();
+    point p;
+    cout<<p.x;
+    p.m1();
+    //p::m1();
+    //cout<<p::x;
+  }
+
+How many way of accessing non-static members?
+ans: Only by using object of class.
+
+(Most imp)
+Types of variables:
+Based on purpose and position there are four types of variable
+a. Local variable
+b. Global Variable
+c. non-static variable 
+d. static variable
+
+Local variable:
+> Any variable declared inside function/methods known as local variables.
+  void m1(){
+     int x;  //local to the m1
+  }
+Global variable:
+> Any variable declared outside function and class known as global variables.
+
+Note: 
+int x = 10; //Global variable
+void main()
+{
+  int x = 20,y = 30; //Local
+  cout<<x;  //20(local)
+  cout<<y;  //30(local)
+  cout<<::x; //10 (global)
+}
+
+3. Non-static variables/Non-static data members/ instance variable/ object variable/Field/ Property:
+   > Any variable declared inside body of class but outside function without using static keyword known as non-static data member.
+
+Whenever memory is allocated for non-static variables?
+> Instance variables are created in the form of objects whenever class is instantiated.
+
+How many times memory is allocated for instance variables?
+Ans: Depends upon number of physical objects.
+
+Note: instance variables cant be directly accessed.
+
+How many way of accessing instance variable?
+Ans: We can access instance variables of any class only by using object of that class or its child class object, Where object can be in the form of pointer or reference variables.
+  
+  syntactically instance variables can be accessed in three types
+  a. using object name (. membership operator)
+  b. using pointer is pointing object(-> indirection operator/ *.)
+  c. using reference is pointing object(. membership operator)
+
+> we can copy one object to another object of same class.
+NOte: instance variables/members cant be accessed by using classname
+  object.member
+  ptr->member
+  (*ptr).member
+  ref.member
+  classname::member
+
+Note: Sometime we may required conversion b/w different type of object but it is not possible directly. We can solve above conversion problem by using conversion constructor or by overloading assignment operator.
+  Ex: feh to celcius, meter to kilometer.
+
+How to initialize non-static const data members?
+How to initialize reference variables which is declared as data members?
+> By using member initilizer list 
+
+> We can create one type of object as a instance variable of another class. But we cant create object of current class as a non-static data members.
+  class Point{
+     int x;
+     Point p;  invalid
+  }
+
+Static variables/ static data members/class variable:
+> Any variable declared by using static, inside body of class but outside function body known as static data members.
+  syntax:
+   class Point
+   {
+      public:
+         static int x;  //declaration 
+   }; 
+> Inside class, only declaration is allowed to static variables. 
+> We must provide definition(value) of static variable seperately outside body of class.
+  syntax: definition (default definition is zero)
+          datatype classname::variable = value;
+> Outside class we can provide definition for any type members
+  ie. private,protected,public
+
+Whenever memory is allocated for static variable?
+Ans: At the time of code loading.
+
+How many way of accessing static variable?
+Ans: static variables can be accessed
+     a. by using classname
+     b. by using object
+        I. object name
+        II. object pointer
+        III. object reference
+Note: Within a current class and child class static variables can be directly accessed.
+> definition of static variable should be provide in global scope. we cant provide definition of static variable inside function.
+
+> Over the static variables local variables will gets high priority
+  class point{
+     public :
+        static int x;
+        void m1(){
+          cout<<x;  //10
+          int x = 1;
+          cout<<x;  //1
+          cout<<point::x;  //10
+        }
+  }
+  int point::x  = 10;
+> At the time of object creation by using initializer list we can initialize only instance variable, we cant initialize static variables.
+
+> since loading is a one time process hence memory is allocated only for a static variable.
+
+point:
+  static int x;
+  int y;
+
+
+static variable  vs non-variable
+
+loading		    object creation
+data area	    stack,data,heap
+(1)		    [0-*]
+
+classname/obj	    object
+
+
+directly	    instance block    
+
+
+Member function or methods:
+> Any function declared inside class known as member function, member function also known as methods
+
+There are two types of member function
+a. static member function
+b. non-static member function
+
+Static member function:
+> Any function declared inside class by using static keyword known as static member function.
+  class Point
+  {
+     .........
+     static void m1()
+     {
+         .....body
+     }
+  };
+
+> how many way of access static member function.
+  a. using class name
+  b. using object
+
+  Ex1:
+  class point
+  {
+    public:
+      static void m1()
+      {
+        cout<<"inside m1"<<endl;
+      }
+  };
+  void main()
+  {
+    point p;
+    m1();
+  }
+
+  Ex2:
+  class point
+  {
+    public:
+      static void m1()
+      {
+        cout<<"inside m1"<<endl;
+      }
+  };
+  void main()
+  {
+    point p;
+    point::m1();
+    p.m1();
+  }
+> inside static member function we can access static variable of the current class directly, but we cant access instance variables directly
+  Ex:
+  class point
+  {
+    public:
+      int x;
+      static int y;
+      static void m1()
+      {
+        cout<<x;  invalid
+        cout<<y;  valid
+
+        point p;
+        cout<<p.x;  valid
+        cout<<p.y;  valid
+      }
+  }; 
+  Ex2:
+  class point
+  {
+    public:
+      void f1(){}
+      static void f2(){}
+      static void m1()
+      { 
+        f1();  invalid
+        f2();
+      }
+  }; 
+
+Non-static member function/instance methods:
+> Any function declared inside body of class without using static keyword known as non-static member function.
+
+> can be accessed only by using object(pointer/reference)
+> non-static functions can be directly called by the another non-static function of same class.
+
+> instance methods cant be directly called by the static functions.
+
+> inside instance methods any member of same class can be directly accessed.
+
+> member function declaration can be provided only inside class. But definition of member functions can be provided either inside class or outside class in global scope.
+
+Example: member function definition inside class
+  class point
+  {
+    public:
+      void m1()
+      {
+        ...
+      }
+  };
+Example:  member function definition outside class
+  class point
+  {
+    public:
+      void m1();  //non-inline
+      void m2()   //inline
+      {
+      }
+      inline void m3();  //inline
+  };
+  void point::m1()
+  {
+    ........
+  }
+  void point::m3(){}
+
+> if defintion of any member function available inside class then such type of function by default treated as inside. No need to specified explicitly as inside.
+
+> if definition of any member function available outside class then by default it is non-inline.
+
+> It is highly recommended to provide definition of member function outside class.
+
+> In c++ we can provide class declaration and class definition seperatly
+  Decl:
+        class Classname;
+
+
+(Most Important)
+Constructor vs Destructor:
+
+Working with constructor:
+> Constructor is a method having same name of class.
+> Constructor name must be same as class name.
+> Since constructor doesnt have any return type hence construtor cant return a value.
+  class Classname
+  {
+     public:
+       Classname()
+       {
+         .......
+       }
+  };
+
+  Classname(); //object creation statement, not a constructor calling
+
+> Since constructor doesnt have its own names therefore it is also known as anonymous block/function or nameless methods.
+
+Whenever consturctors are executed?
+Ans: Since constructor methods doesnt have any name hence we cant call constructors directly.
+
+    Constructors are automatically/implicitly called by the compiler at the time of object creation.
+
+Constuctors are automatically called at the time of instantiation.
+
+> constructors can be overloaded within a class only.
+
+> constructor definition/implimentation can be provided outside body of class.
+  class Classname
+  {
+    ........
+    Classname(int x)
+    {
+       
+    }
+  };
+  Classname::Classname(int x)
+  {
+
+  }
+
+class Point
+{
+   int x;
+   static int y;
+   Point()
+   {
+     any type of statements......allowed
+     cout<<x<<y;  valid
+   }
+}
+
+> Constructors implicitly executed at the time of object creation (instantiation).
+
+> By default every class has zero argument implicit constructor which cant be seen  by the programmer physically.
+
+Who is responsible for providing zero arugment implicit(default ctor) constructor?
+Ans: For every class c++ compiler will provides default zero ctor.
+
+If any class having explicit constructor declaration then compiler will never prode implicit constructor.
+
+Partial initializer list vs constructor:
+------------------------------------------
+> As we know in c++ data member of any class can be partially initialized at the time of object creation.
+Ex: 
+  class point
+  {
+    public:
+      int x,y;
+  };
+  ..............
+  point p = {10,20};  valid
+  point q = {10};     valid
+  p = {1,2};          invalid
+
+> But partial initialization is not allowed if those class having explicit constructor.
+
+> partial initialization is not applicable for private data members.
+> It is highly recommended we never use partial initialization in c++, because it is violating object oriented propery.
+
+Types of constructor:
+1. default constructor
+2. parameterized constructor
+3. copy constructor
+4. conversion constructor
+5. private constructor
+
+Default constructor:
+> If any constructor which can be executed/called without any argument known as default constructor.
+
+> Zero argument constructor is always default constructor.
+> if all parameter of any constructor available with default value then such of constructors are default as well as parameterized
+Ex: Identify which is default constructor for Point class
+
+  Point(){}   -yes
+  Point(int x=0){}  -yes
+  Point(int x){}    -no
+  Point(int a=1,int b=2){}  -yes
+
+Parameterised constructor:
+> If any constructor which can take any argument during object creation known as parameterized contructor.
+
+> If any constructor having atleast one parameter known as parameterized constructor.
+
+> Constructors can be overloaded.
+
+> constructor definition can be provided either inside class or outside class.
+
+Destructor:
+> Desctructor is also member function of the class. 
+> Destructor name must be same as class name followed by ~ (tilde) sign.
+  syntax:
+     ~ Classname()
+     {
+       ........
+     }
+Whenever destructors are executed?
+Ans: Destructor blocks/function are implicitly executed just before object deallocation.
+
+> Since destructor doesnt takes any parameter because it should be zero argument function, therefore destructor cant be overloaded.
+
+> destructor must be zero parameterized function
+  ~Classname()
+  {
+ 
+  }
+> cant be overloaded
+> within a class only one destructor is allowed
+
+Note: Constructors cant be overridden, but it can be overloaded. Constructor cant be virtual.
+
+Note: Destructors can be virtual
+
+Interview Questions:
+What is the purpose of constructor?
+What is the prupose destructor?
+Why copy constructor?
+Why virtual destructor?
+
+
+Why constructor?
+> According to encapsulation property of oops data member(instance variable) should be declared as private due to security resons. 
+> Functions can be private or protected or public.
+
+> If you want to initialize state of any object at the time of object creation with different-2 values then you should go for constructors.
+
+> By using constructor we can initialize private data members of any class at the time of object creation.
+
+Member initializer list:
+------------------------
+> Member of any class can be initilized either inside body of constructor or along with constructor header.
+class Point
+{
+   int x,y,z;
+   case1:
+   Point()
+   {
+      x = 1;
+      y = 2;
+      z = 3;
+   }
+   case2:
+   Point():x(1),y(2),z(3)
+   {
+   }
+   case3:
+   Point(int a=0,int b=0,int c=0):x(a),y(b),z(c)
+   {
+      x(a) =>  x = a
+   }
+}
+
+What is member initializer list?
+Ans: Any variable initilizer list added with constructor header known as member initializer list.
+
+    Classname():var1(val1),var2(val2).........{
+
+    }
+
+Q: In which order member initializer list going to be executed?
+Ans: It depends upon order of data member declarations.
+
+> If any data member is a part of member initializer list then we must pass argument for that variables.
+  Point():x(arg1),y(args2)  valid
+  {
+
+  }
+  Point():x(arg1),y()  invalid
+  {
+  }
+> argument can be variable, value, function, expressions.
+> using member initializer list any data member can be initialized only once.
+  Point():x(10),x(20)   //invalid
+  {
+
+  }
+
+> Member initializer list can be added only with constructor, it cant be used along with functions.
+  void m1():x(1),y(2)  //invalid
+  {
+  }
+> By using member initializer list we cant initialize static data members.
+  class Point{
+     static int x;
+     public: Point():x(10)  invalid
+     {
+     }
+  }
+
+What is the purpose of member initializer list?
+1. const data members cant be initialized by using constructor body. const data members can be initialized only by using member initializer list.
+   Ex1:
+   class Point
+   {
+     const int x;
+     public:
+       case1
+       Point()
+       {
+         x = 10;   //invalid
+       } 
+       case2
+       Point():x(10)  //valid
+       {
+         
+       }
+   }
+     
+2. reference data members cant be initialized by using ctor, reference data members can be initilized only by using constructor initializer list.
+   Ex1:
+   class Point
+   {
+     int x;
+     int& y;
+     public:
+       Point():x(10),y(x)   //valid
+       {
+         y = x;  
+       }
+   }
+
+Note: By default every child class constructors makes a call for default constructor(zero argument ctor) of their parent class constructor implicitly.
+
+3. By using member initializer list we can call parent class constructor explicitly from a child class constructor.
+
+What is the purpose of destructor?
+> If any dynamic memory allocated performed by using constructor then it is highly recommended to provided deallocation logics inside destructor block.
+
+
+Copy Constructor:
+====================
+Why copy constructor?
+need of copy constructor?
+
+> if you want to create copy of existing object as a object independent mannors then it is highly recommended to provide explicit copy constructor as well as overloaded assignment operator.
+
+Rules for creating copy constructor:
+> It should be one parameterized constructor
+> Its parameter type should be same as reference of current class.
+
+Note: We cant provide a constructor which can accept object of same class.
+   Vector(Vector v,int x);  valid
+   Vector(Vector v);  invalid
+
+   Syntax:
+      Classname(Classname& r)
+      {
+        ........
+      }
+Conversion Constructor:
+=======================
+> In C++ we can copy or assign one object to another object. But in this type of assignment both object should be same type.
+
+> In C++ we cant assign one type of object(Car) into another type   (Cat)
+
+> But some times it may be required to convert one type of object into another type, by default this type of conversion is not possible. To perform this kind of conversion we should go for conversion constructor
+
+  ex: Meter to KiloMeter
+      KiloMeter to Meter
+  Ex: Celcius to Fahrenheit
+      Fahrenheit to Ceclius
+
+      Meter m = 2000;   => Meter m = Meter(int);
+      KiloMeter km = m; => KiloMeter km = KiloMeter(Meter);
+Assignment: 
+  Class: Fehrenheit
+         a. temp
+         b. Fehrenheit(double)
+         c. Fehrenheit(Celcius)
+         d. display()
+  Class: Celcious  
+         a. temp
+         b. Celcious(double)
+         c. Celcious(Fehrenheit)
+         d. display()
+
+What is the difference b/w constructor and destsructor?
+
+	Constructor			Destructor
+--------------------------------------------------------------------
+1. Classname()			~Classname()
+
+2. can be overloaded		cant be overloaded
+
+3. multipal ctor allowed	not allowed
+
+4. cant be virtual/overridden	can be virtual/overridden
+
+5. initialization and		deallocation/cleanup activity
+   allocation
+
+6. invoked at the of 		invoked at the time object 
+   object creation		deallocation
+
+Dynamic array of objects:
+-------------------------
+> We can create an array of objects of any type(any class) by using new keyword
+  syntax:
+    datatype * ptr = new datatype[size];
+    int      * ptr = new int[5];
+    Point    * ptr = new Point[5];
+
+> if any array is created by using new keyword then it is highly recommended to deallocate such array by using delete keyword.
+  syntax:
+     delete ptr;
+     It will deallocates only first element of the array.
+
+     delete []ptr;
+     It will deallocates entire array elements.
+
+What is the difference b/w malloc and new?
+------------------------------------------
+
+	malloc()			new
+====================================================================
+1. malloc() is a function		new is a keyword/operator
+
+2. datatype * ptr;			datatype * ptr;
+   ptr = (datatype*)			ptr = new int[n];
+   malloc(n*sizeof(datatype));
+
+3. typecasting is required		typecasting is not required
+
+
+4. malloc() will never calls		It will also calls ctor
+   constructor of the instantiated
+   class
+
+5. it will allocates memory block       It will allocates memory
+					irrespective of elements
+
+What  is the difference b/w free() and delete?
+
+	free()			delete
+====================================================================
+free() is function		delete is a keyword/operator
+
+never calls destructor		always calls destructor
+
+free() is applicable to perform    delete is applicable to perform
+memory deallocation which is	   memory deallocation which is 
+allocated by using malloc()	   allocated by using new.
+
+Imp:
+this pointer:
+=============
+> this is a keyword in c++.
+> this is a constant implicit pointer which is created inside constructor and non-static methods
+  syntax:
+     Classname * const this = address of current object;
+  class Point
+  {
+    ................
+    Point(Point * const this)
+    {
+       this = new Point();  invalid
+       cout<<this;
+    }
+    void m1(Point * const this)
+    { 
+
+    }
+    static void m2()
+    {
+ 
+    }
+  }
+  ..................
+  Point p; => Point p = Point(&p);
+  p.m1();  => m1(&p);
+  Point::m2();   
+
+> we cant create a variable explicitly by the name this.
+> we cant assign this pointer explicitly
+  this = &var;
+> this is not available for static method and non-member functions.
+> this always stores address of current object.
+
+> inside instance methods another instance member of same class can be directly accessed. but implicitly these members accessed by using this pointer. 
+
+> If local variable and instance variables having same name then this implicit conversion will never happening.
+
+> If local and instance variables having same name then local variable will gets high priority over the instance variable. In such cases we can access instance variables explicitly by using this pointer.
+
+
+> If instance and local variable having same name then inside constructor initializer list there is no need of qualifying explicitly this pointer
+   Point(int x,int y):x(x),y(y) 
+      => Point(int x,int y):this-x(x),this->y(y)
+
+Access specifiers or access modifiers:
+======================================
+> At class level there are three access scopes are available
+  a. private
+  b. protected
+  c. public
+
+What  is  access specifiers?
+Ans: By using some predefine keywords we can specify scope of the member of the class such type of keyword is known as access specifiers.
+
+There are three types of access specifiers are available in c++, for this purpose there are three keywords are available.
+1. private
+2. protected
+3. public
+
+   class Classname
+   {
+      private:
+        ..........
+      protected:
+        ..........
+      public:
+        ..........
+   };
+
+private:
+> private members can be accessed only inside current class, it cant be accessed outside current class.
+Note: private members can be accessed either within a current class or inside freind function and freind.
+
+  class A
+  {
+     private: int x;
+     private: void m1()
+              {
+                ....
+              }
+     ..............
+     void test()
+     {
+       cout<<x;  valid
+       m1();     valid
+     }
+  };
+  class B
+  {
+     ......
+     void test()
+     {
+        A obj;
+        obj.m1();  invalid
+        cout<<obj.x;  invalid
+     }
+  };
+> By default member of any class is treated as private
+> By default member of structure is treated as public.
+
+
+public:
+> public member of any class can be accessed anywhere, but need to use classname or object.
+
+What is the difference b/w public and global declaration?
+> global declarations can be directly accessed anywhere in the program.
+
+> But public declarations cant be directly, need to be having classname or object
+
+protected:
+> protected members can be accessed either inside current class or inside their child class also.
+  class A{
+    protected:
+      int x;
+    ........
+    void m1(){
+      cout<<x;  valid
+    }
+  };
+  class B:A{
+    void m2(){
+      cout<<x;  valid
+    }
+  }
+Note: Inside child class protected member  of parent class either can be accessed directly or can be by using child class object. But inside child class parent class protected members cant be accessed by using parent class object.
+Ex:
+class A
+{
+  protected:
+	 int x;
+};
+class B:A
+{
+  public:
+	 void m1()
+	 {
+		cout<<x;
+		B obj;
+		cout<<obj.x;
+		A aobj;
+		cout<<aobj.x;  invalid
+	 }
+};
+
+const member function/constant member function:
+===============================================
+> In c++ by using const keyword we can provide constant variable declaration as well as constant member function.
+  syntax:
+     void fun(...) const
+     {
+     }
+
+> by using const keyword we can provide const function declaration
+
+> Only member functions are allowed to be constant. We cant declare any static member function as constant.
+
+> In order to access the data member of any class as read only manors member function should be declared as const.
+
+> Inside constant member function we cant change state of current object
+  class Point
+  {
+    int x,y;
+    static int a;
+    .....
+    void m1()const
+    {
+      x = 1; invalid
+      a = 0; valid
+      Point p;
+      p.x = 1;  valid
+    }
+  };
+> inside const function we can change global or static variable.
+> we cant declare non-member function or static member function as a const. 
+    void m1() const  //invalid
+    {
+    }
+> Inside const member function eventhough we can call non-constant function but we should avoid it.
+
+Friend function/declaration:
+> friend is a keyword in c++.
+> inside friend function we can access private member of the class eventhough they are not a member of current.
+
+class Point
+{
+  private:
+    int x,y;
+    friend void m1();
+    friend void Test::m2(Point p);
+};
+
+void m1() //non member
+{
+  Point p(10,20);
+  cout<<p.x;  valid
+}
+class Test
+{
+  public:
+     void m2(Point p)
+     {
+       cout<<p.x;  valid
+     }
+}
+void main()
+{
+  m1();
+}
+There are three types friend declarations supported by c++
+==========================================================
+a. friend as a non-member function
+b. friend as a member function(including constructor)
+c. friend class
+
+friend as a non-member function:
+> We can declare any non-member  function as friend to the class.
+note. Inside friend function we can access any member of the class.
+
+> Inside friend function we cant access member of any class directly. 
+> Inside friend function we can access private/protected/public member of any class either by using classname or object.
+
+
+Declaring friend as a member function:
+> We can declare any member function of the class friend to the another class.
+
+Friend class:
+> All member function of friend class can access any property of another declaration.
+
+   syntax:
+      friend class Classname;
+
+Object oriented concepts:
+=========================
+> Object oriented is not a programming  language, it is concept by using which can provide our own implementation and this implementation is known as programming language.
+
+The main pillors of oops are
+1. Encapsulation
+2. Inheritance
+3. Polymorphism
+
+Encapsulation:
+> encapsulation is a process of binding access permission of data members with its related member functions.
+
+What is abstraction?
+ans: abstraction is a process of hiding implementation details and highlighting their services.
+  ex: mobile,fan,laptop,bike,car....
+
+  
+   Encapsulation = abstraction + data Hiding 
+
+Polymorphism:
+=============
+> It is a process of associating multipal functionalities with single names.
+
+> If any name (variable name, function name,operator) can be use for more then purpose is nothing but polymorphism.
+
+> Polymorphism is a concept of oops, but there are given implementations possible for polymorphism
+a. overloading 
+b. overridding
+
+There are two types of polymorphism
+1. static polymorphism / compiletime poly/ static binding/ compiletime binding/ early binding
+
+2. dynamic polymorphism/ runtime poly / dynamic binding/ runtime binding/ late binding
+
+What is binding?
+ans: binding is a process of binding method calling to its method implementation.
+
+There are two types of binding
+a. static/compiletime binding:
+   > If any method calling bind/fixed to the method definitions at time of compilation by the compiler known as static/compiletime/early binding.
+     ex: overloading
+
+b. dynamic/runtime/late binding:
+   > If any method calling bind/fixed to the method implementations at the time of execution by the OS known as as runtime/dynamic/late binding
+     ex: overridding
+
+> static polymorphism can be practically achieved by using overloading
+> dynamic poly can be practically achieved by using orverriding
+
+Overloading:
+===========
+There are two types of overloading available in c++
+a. function/method overloading
+b. operator overloading
+
+Overloading:
+> Overloading is a static polymorphism which is performed by the compiler based on current object.
+ 
+There are two types of overloading supported by c++:
+1. Operator overloading
+2. Function overloading
+
+Operator Overloading:
+=====================
+What is the purpose of operator overloading?
+Ans: By default all operators are compatible with primitive types only, any operator can be applicable for primitive type of value or variables only.
+
+We cant apply any operator directly upon an object. If you want to apply an operator upon an objects then that operator should be overloaded.
+
+Which C++ operators cant be overloaded?
+ans:  ?:, ::, *.,
+
+There are two way of overloading an operator:
+1. non-member function
+2. member function
+
+The way of overloading unary operator is totaly different from an overloading binary operator.
+
+Is it possible to change the precedence/priority or associativity of an operator by using operator overloading?
+Ans: No, It is not possible.
+     By using operator overloading we cant change the precedence or associativity of an operator.
+
+Is it possible to change the behaviour/purpose of an operator?
+> yes by using operator overloading we can change the behaviour of an overator but it is not recommended.
+
+> We can overload any operator by using 'operator' keyword.
+
+How to overloading binary + operator as a non-member function?
+Ans:
+  syntax:
+     datatype operator @(datatype p1,datatype p2)
+     {
+        ......
+     }
+
+class String
+{
+
+}
+
+Assignment:
+  String s = "ABC";  => String s = String("ABC");
+  s = s + "XYZ";
+  s = "xyz" + s;
+  s = s + 10;
+  s = 10 + s;
+  s = "ABC" + "XYZ";
+
+
+class String
+{
+   private:
+      char str[100];  
+};
+
+Assignment2:
+  Point: x,y
+
+  .......
+  Point p1(1,2),p2(5,6),p3;
+  p3 = p1 + p2;
+  p3 = p1 + 10;
+
+How to overloading binary operator(+) as a member function?
+
+class Numeric
+{
+  .................
+  Numeric operator +(){
+
+  }
+}
+
+Overload binary +,-,*,/,% operators inside Numeric class as a member function?
+
+Overload all binary relational operators inside Numeric class as a member function?
+   n1 > n2
+   n1 < n2
+   n1 >= n2
+   n1 <= n2
+   n1 == n2
+   n1 != n2
+   
+   syntax: overloading relational operator
+           int operator @(Classname obj)
+           {
+             return var @ obj.var;
+           }
+Overload all binary relational operators as a non-member function to the Numeric object
+  n1 @ n2
+
+Overload all logical operators in order to Numeric object?
+
+Overload all binary relational operators as a member function inside Point class?
+  Point: x,y
+         Point p1(?,?),p2(?,?);
+       
+           return  p1.x @ p2.x && p1.y @ p2.y
+
+Unary overloaded operator:
+==========================
+How to overload pre-increment operator to the Numeric class as a non-member?
+
+How to overload pre-increment operator to the Numeric class as a member?
+
+How to overload post-increment operator to the Numeric class as a non-member?
+
+How to overload post-increment operator to the Numeric class as a member?
+
+Overloading Pre-increment as a non-member function:
+class Classname
+{
+  int value;
+  ...........
+};
+Classname operator ++(Classname& obj)
+{
+  return Classname(++obj.value);
+}
+Overloading Post-increment as a non-member function:
+Classname operator ++(Classname& obj,int)
+{
+  return Classname(++obj.value);
+}
+
+Classname obj;
+++obj;  => ++(obj);
+obj++;  => ++(obj);
+
+How to overload pre/post increment operator as a member function?
+ 
+
+How to overload bitwise << and >> operator in order to cout and cin?
+
+If you want to overload << and >> overloaded function as given style
+   cout<<obj;
+   cin>>obj;
+Then it should be overloaded as a non-member function, We cant overload for such type calling as a member function.
+
+cout<<obj;  => <<(cout,obj);
+
+
+
+ostream& operator <<(ostream& out,Number n)
+{
+   .....
+   return out;
+}
+
+
+cout<<n1<<n2;
+(*this)<<n2;
+
+
+
+
+a + b;
+Member function:
+  a + b => a.+(b)
+
+Non-member function:
+  a + b => + (a,b)
+
+cout >> obj;
+
+Number obj;
+  obj>>cout;   
+class Number
+{
+  ...........
+  Number& operator >> (ostream& out)
+  {
+    out>>value;
+  }
+};
+  
+Method/Function overloading:
+> We can also overload any function/method in c++.
+
+> If multipal function declarations are available with same names but different parameter list known as function overloading
+ 
+What is name mangling?
+> It is a process of mapping an orginal function name with new name (unique name). 
+
+> For every function declaration c++ compiler  will provides/creates unique name at the time of compilation this function renaming process is known as name mangling.
+
+What is the purpuse of name mangling?
+> Name mangling process resolves the ambiguity problems during function calling. 
+
+Who is responsible for providing mangled names for the function?
+ans: C++ Compiler
+
+What is vtable?
+> vtable created by the c++ compiler at the time of compilation in the form of object/executable code for storing the information about name mangling.
+
+Is c++ compiler will creates vtable for every programs?
+Ans: By default yes, But in some case we can stop the vtable creation process.
+
+We can stop name mangling process in C++ program by using extern "C" declaration added with function header.
+
+> We cant overload any operator as a member function as well as non-member function for same signature at same.
+
+
+> We can overload any operator as a member function as well as non-member function for different signature at same.
+
+(Most Imp)
+Types of Relationship between two or more classes:
+According to oops there can be two types of relationships are possible b/w two or more classes
+
+1. HAS-A Relationship or Containership
+2. IS-A Relationship or Inheritance
+
+C1: Person
+C2: Phone
+C3: Student
+  
+R1: Person HAS-A Phone
+R2: Student IS-A Person
+
+Student HAS A  Pen
+BEStudent  IS-A Student
+McaStudent IS-A Student
+Car IS A Vehicle
+Bike IS Behicle
+Car HAS A Wheel
+College	HAS A Student
+Movie HAS A Actress
+BollyWood IS A Movie
+HollyWood IS A Movie
+
+What is the purpose maintaining relation b/w two or more classes?
+> Code Reusability
+> Enhancement
+
+Ex:
+Address: street,city,state
+
+Emp    : id,name,salary;
+
+Actress: Emp
+         Address addr;
+Actor  : Emp
+         Address addr;
+Director:Emp
+         Address addr;
+
+
+HAS A relationship or Containership:
+====================================
+> We can create HAS-A relationship between two classes by making of an existing class as data member to the newly created class
+  Ex:
+     class Phone{
+       ......
+     }
+     class Person{
+       ......
+       Phone cell;
+       .......
+     }
+> Where existing is known as contained class, and newly defined class is known as container class.
+
+Advantage:
+> The main advantage of HAS-A or containership is code reusability.
+
+Disadvantage:
+> enhancement is not allowed
+
+
+Actor: ........
+
+Movie: ........
+
+class Movie  
+{
+   Actor a1;
+   Actor a2;
+   Actor a3;
+
+}
+........
+Movie kkkg("Shahrukh","Amit","Hritikh")
+
+
+class
+{
+  var: private
+}
+
+> According to encapsulation concept of oops data member of any class should be declared as private due to data security reason.
+
+How many way of initializing private state of any class?
+How many way of initializing data member of any class?
+There are two way:
+
+1. Constructor Initialization 
+   We can initialize state of any object at the time of instantiation by using constructor.
+
+   What is the purpose of constructor initialization?
+   Why constructor?
+   > If you want to initialization state of an object at the time of instantiation with different-2 values(unique state) then you should go for constructor initialization
+
+What is the disadvantage of constructor initialization?
+> Eventhough we can initialize state of different-2 object by using unique state but still constructor initialization is not recommended, because by using constructor initialization we can initialize state of any object only once.
+
+> Once object creation process is completed then we cant change state of existing object by using constructor initialization.
+
+> As we know for any object constructor will be executed only once, therefore by using constructor we can initialize state of any object only once.
+
+> In this process object might becomes immutable.
+
+We can overcome above multipal time initialization problem by using setter initialization.
+
+What is setter methods/mutators?
+> Any method which can change state of any object known as setter method 
+
+> Setter method also known as mutators.
+
+> Setter is a method by using which we can change current state of any object.
+
+Convension for developing setter methods:
+> since it doesnt returns any value therefore its return type should be  void
+
+> There should be seperate setter method for each requirement(data members)
+
+> Name should be prefixed by set and postfixed by name of the curresponding data members.
+
+> First character of inner words of the method name should be in upper case.
+
+> It should be one parameterised method
+
+> setter method should be public.
+
+
+What is the purpose of getter method or accessors?
+Ans: By using getter methods we can access value of private data members from outside class.
+
+> getter methods also known as accessors, because it will provides access of the private data members.
+
+Convension for getters/accessors:
+> should be public
+> Since it will returns value of data members therefore its return type should be same as type of corresponding data members.
+
+> Name should starts with get postfixed by name of the data members.
+
+> It is zero argument method.
+Ex:
+class Employee
+{
+   private:
+     int id;
+     char name[10];
+     double salary;
+   public:
+     void setId(int id){
+       this->id = id;
+     }
+     void setName(char* name){
+       strcpy(this->name,name);
+     }
+     void setSalary(double salary){
+       this->salary = salary;
+     }
+     int getId(){
+        return id;
+     }
+     char* getName(){
+        return name;
+     }
+     double getSalary(){
+        return salary;
+     }
+};
+void main()
+{
+   Employee e1(101,"VITTHAL",1000);   
+   Employee e2(102,"SHIV",1200);   
+}
+
+class Student
+{
+  private:
+    int sno;
+    char name[20];
+    double fee;
+  public:
+    setter & getter
+    ...............
+};
+
+Note: It is highly recommended to provide getters/setters inside every java class to initialize or access the private data members.
+
+Inheritance or IS-A relationship:
+
+> Definition
+> Introduction
+> Why inheritance?
+> Rules of inheritance
+> What is the difference b/w private,protected and public,virtual inheritance?
+
+> Types of inheritance
+  a. single level 
+  b. multi level 
+  c. multipal 
+  d. hybrid 
+  e. hierarchical 
+  f. virtual inheritance (imp)
+
+
+What is inheritance?
+Ans: Inheritance is a process of defining/creating a class by inheriting the functionality of an existing class
+
+> It is a process of creating a class by deriving the functionality of an existing class (Base/super/parent class).
+
+> Whatever available in parent class is by default available to the child class through inheritance.
+
+Why inheritance?
+> Any functionalities required inside more than class then we should place that common declarations inside seperate new class and remaining required classes should be inherited from that class where the functionalities are available.
+
+What is the advantage of inheritance?
+1. By using inheritance we can reuse the base class functionalities inside their child class. Inheritance promotes the code reusability.
+
+2. It will also allows the enhancement in super class functionalities (using overridding).
+
+syntax:
+  class Parent
+  {
+    ............
+  };
+  class Child : [access specifier] Parent
+  {
+    ........
+  };
+
+> In case of inheritance top level class is known as base class or super class or parent class, where bottom level class is also known as child class or sub class or derive class.
+
+> In case of inheritance whatever available in parent class is by default available to the child class. Parent class members can be directly access inside their child class. But reverse is not possible, Means child class members cant be directly access inside their parent class.
+
+> As we know private member of any class cant be accessed from outside that class, therefore private members doesnt participates in inheritance process hence we cant access private member of parent class inside their child class.
+
+> Inside child class we access only protected and public member of their parent class.
+
+> By using child object we can access parent class members also.
+
+> whenever child class instantiated then memory is allocated for child class members as well as parent class data member also. 
+
+> whenever parent class is instantiated then memory is allocated for only parent class data members. By using parent class object we can access only parent class members.
+  Parent object: can access only parent members
+  Child object : can access child member + parent class members
+
+
+Inheritance vs constructor:
+> By default every child constructor make a call for zero argument constructor of their parent class. But inside child constructor we can call parameterized constructor of parent class from member/constructor initializer list of child class
+
+   Child() : Parent(?,?,?....)
+   {
+
+   }
+> In case of inheritance if parent class doesnt have zero argument constructor due to explicit constructor, and child class constructor doesnt have explicit calling to the parent constructor then we cant instantiate child class.
+
+private constructor:
+> If constructor of any class is declared as private then we cant instantiate that class from outside. But we can instantiate that class within a current class only.
+
+> If constructor of any class declared as protected than that class can be instantiated either within a current class or within a child class only.
+
+> If parent class constructor declared as private then we cant instantiate its child class.
+
+Based on access specifiers there are three types of inheritance are available:
+1. private inheritance
+2. protected inheritance
+3. public inheritance
+
+private inheritance:
+  class Child : private Parent{
+    ....
+  }
+
+  > In this type of inheritance parent class protected and public members acts like a private member inside child class.
+
+  > parent class members cant be accessed inside child class of child
+  > parent class members cant be access by using child object outside from child class.
+
+protected inheritance:
+> In this type of inheritance parent class public members are inherited as a protected member inside child class
+
+> parent class public members converted as protected to the child class.
+
+public inheritance:
+> In this case there no conversion performed b/w parent and child class.
+
+> parent class protected members acts like a protected to the child class also. Similarily parent class public members acts like a public to the child class.
+
+Parent:
+  public:
+   m1()
+   m2()
+   m3()
+Child : private Parent
+  private:
+   m1()
+   m2()
+  public:
+   m3()
+
+In private inheritance part of the base class interface can be made avaiable to the functions outside the derived class?
+ans: Yes
+
+> Default type of inheritance is private.
+class P1{
+};
+class P2{
+}
+class C:public P1,public P2{
+
+}
+
+Imp:
+Q: In which order constructor and initialization will be perform in order to parent/child class whenever child class object is created?
+
+Step1: Child constructor going to be invoked
+Step2: Child constructor constructor make a calls for Parent class constructor
+Step3: Parent class constructor initializer list going to be executed
+Step4: After that body of Parent class constructor going to be executed
+Step5: After child class constructor initializer list be completed
+Step6: Body of Child class constructor going to be executed.
+
+Types of Inheritance:
+1. Single Level Inheritance
+2. Multi-level
+3. Multipal Inheritance
+4. Hierarchical Inheritance
+5. Hybrid/cyclic inheritance
+6. Virtual Inheritance
+
+Single Level Or Simple Inheritance:
+===================================
+> If any inheritance having only one level in parent/child client known as single level inheritance
+
+class A
+{
+};
+class B : public A
+{
+};
+
+Multi-level inheritance:
+> If any inheritance having more than one levels in b/w parent/child class known as multi-level inheritance.
+class A
+{
+   int x;
+};
+class B:public A 
+{
+   int y;
+};
+class C:public B
+{
+   int z;
+};
+
+sizeof(C) => 6
+C obj;
+    constructor calling order: C()=>B()=>A()
+    constructor execution order: A() =>B() => C()
+
+Multipal Inheritance:
+=====================
+> If multipal or more than one super class present at same level known as multilevel inheritance.
+
+class A{};
+class B{};
+class C:A,B{}
+
+> The main problem with multipal inheritance is there may be chance of having ambiguity b/w same level of parent class.
+
+> If same member present in more than one parent class at same level than that parent class member cant be directly accessed inside there child class, But we can access that common member by using parent class name.
+
+Hierarchical Inheritance:
+> If any inhertiance forms as a tree(Acyclic Graph) known as Hierarchical inheritance
+
+class A{};
+class B:A{}
+class C:A{}
+
+Hybrid Inheritance:
+> It is a combinition of more than one type of inheritance
+  Ex:
+    hybrid : multipal + multilevel
+    hybrid : multipal + cyclic
+    hybrid : cyclic
+
+Cyclic Inheritance:
+> If any inheritance forms a cycle based on parent/child relationship known as cyclic inheritance.
+  class A{};
+  class B:A{}
+  class C:A{}
+  class D:,B,C{}
+
+Some Important Assignments b/w Parent and Child class:
+=====================================================
+> As we know we can assign one object inside another object of same type. Similarily we can assign child class object into parent class object only in case of public inheritance.
+
+> child type object cant assign into parent type object in case of protected and private inheritance.
+
+> Parent class object cant assign to the child class object.
+
+> By using super class object we cant access child class new members, By using super class object we can access only super class members, Eventhough this super class object is assigned by using child class.
+
+> Parent class pointer can hold address of parent type object as well as address of child type of object
+   Case1:
+   void m1(Child * ptr)
+   {
+
+   }
+   .........
+   Parent p;
+   Child c;
+   m1(&p); invalid
+   m1(&c); valid
+Case2:
+   void m1(Parent * ptr)
+   {
+
+   }
+   .........
+   Parent p;
+   Child c;
+   m1(&p); valid
+   m1(&c); valid
+Case3:
+   Child* m1()
+   {
+     Parent p;
+     Child  c;
+     return &c;
+     //return &p;  invalid
+   }
+Case3:
+   Parent* m1()
+   {
+     Parent p;
+     Child  c;
+     return &c;
+     or
+     return &p;   
+   }
+> Eventhough Parent type pointer can point child class object, but by using parent class pointer we cant access child class members, By using parent class pointer we can access only parent class members.
+
+Parent: m1() -1
+Child : m1() -2
+
+Parent* p = new Parent();
+p->m1();
+
+p = new Child();
+p->m1();
+
+Whenever parent type pointer is pointing child object then by using this pointer we can access only parent class members, we cant access child class new members then what is the use that situation?
+ans: By using this behaviour we can achieve polymorphism
+
+
+Legal:
+  Parent*  ptr = new Parent(); valid
+  Child*   ptr = new Child(); valid
+  Parent*  ptr = new Child(); valid(imp)
+  Child*   ptr = new Parent(); invalid
+  A*       ptr = new B();      invalid
+
+
+Dynamic Polymorphism or Runtime Polymorphism or Late binding:
+> Dynamic polymorphism can be practically achieved by using method overridding. 
+
+> Method overridding
+  Method overriding resolved by the OS based on object type. But overloading resolved by the compiler at the time of compilation based on pointer type.
+
+  When we can say method is overridden successfully?
+  > We can test the given method is overridden or not based on parent class pointer is pointing child class object, And by using that pointer we are able to call child class overridding method then we can say method is overridden successfully.
+
+  What is overridding?
+  Rules of overriding?
+
+Method Overridding:
+===================
+What is method overridding?
+> Whatever available in parent class is by default available to the child class through inheritance, but sometimes child class is not satisfied with parent class provided implementation/body/logic/ difinition then child is allow to provide our own new implementation this new implementation is nothing but method overridding.
+
+> In case of method overridding method execution depends upon type of object. Therefore it is also known dynamic polymorphism or dynamic binding.
+
+> As we know parent class method can be overloaded either inside parent class or inside their child class. But parent class method can be overridden only inside their child class.
+
+> In case of method overridding return type of the method, method name, method argument type/list must be same. Parameter name can be same or different.
+
+Note: By default method overridding doesnt supported by c++, In C++ we can override only virtual methods.
+
+Note: We cant override non-virtual, Based on requirements parent class non-virtual method we can redefine inside child class but its not overriding.
+
+Virtual function:
+> Any function declared by using virtual keyword known as virtual function.
+> virtual is a keyword in c++. Generally virtual keyword can be used in two places
+  a. virtual function
+  b. virtual inheritance
+  c. virtual base class (imp)
+  d. virtual destructor(imp)
+  e. pure virtual function(imp)
+> we cant declare a variable as virtual.
+> by using virtual keyword we can take the advantage of dynamic polymorphism
+  virtual rtype fun(...)
+  {
+  }
+  virtual int x = 10; invalid
+> Rules of virtual function declaration:
+  1. Non-member functions cant be declared as virtual
+
+  2. Parent class virtual can be override inside their child class
+  3. In case of Multi level inheritance Parent class non-virtual function can be marked as virtual at any level of the inheritance
+
+  4. Impact of virtual function will be  tested based on pointer type 
+  5. Method overridding will be applicable for pointer type or parent class of pointer type
+  6. virtual function of any class can override inside either direct child or indirect child class (grand child).
+  7. overriding a virtual function inside child class is optional
+
+  8. We cant override private/protected virtual methods inside child class. Only public virtual function is allow to overriding.
+
+  9. Based on requirement we can redefine parent class private/protected methods inside their child. But its not overriding is happening.
+
+  10. Parent class static methods cant be overridden inside their child class. We cant override static method of parent class.
+
+  11. static methods cant be declared as virtual.
+  12. we cant change return type of method during overridding.
+  13. parent class private methods can be declared private/protected/public inside their child.
+   private < protected< public
+  14. Access level of the parent class can be increased inside their child class. But access level of parent class methods cant be decreased inside their child class
+
+   
+abstract class vs abstract methods(pure virtual function):
+> abstract methods cant have a body/implementation.
+> abstract methods cant be private.
+> abstract methods cant be static.
+
+What is abstract class?
+Ans: Any class having any abstract method (pure virtual function) known as abstract class.
+> abstract class is an incomplete because it may have incomplete method(abstract method)
+
+> Any class having pure virtual function now this class is considered as abstract by the c++ compiler
+
+> abstract class cant be instantiated.
+> abstract class can have abstract method as well as non-abstract method.
+
+How to declare pure virtual function?
+ans:
+class Classname
+{
+  public:
+    virtual rtype fname(...)=0; //pure virtual or abstract method
+}; 
+Classname obj; invalid
+Classname * ptr;
+Classname& ref = ?;
+
+Q: Who is responsible for providing definition/implementation of abstract method?
+ans: It is responsibility of child class to override abstract methods of parent class.
+
+> Whenever any class inherited from abstract class then inside that child class we must override all abstract(pure virtual) methods of their parent. Otherwise child class also interpreted as an abstract class. In this case child class also cant be instantiated.
+
+> By using parent pointer is pointing child object, we can access only parent class member or overriding method of their class.
+
+> In c++ only virtual function and destructor can be participate in overridding.
+
+Note: We cant override constructor and non-member function, therefore it cant be declared as virtual
+
+Note: Variables cant be overridden.
+
+virtual constructor:
+====================
+> constructors doesnt participates in overridding hence we cant declare constructor as virtual
+  Ex:
+    class Point
+    {
+      public:
+        virtual Point(){}  invalid
+    };
+
+virtual destructor:
+> We can declare a destructor as virtual
+    class Point
+    {
+      public:
+        virtual ~Point()
+        {
+
+        }   
+    };
+
+Why virtual destructur?
+Need of virtual destructor?
+What is the purpose of virtual destructor?
+
+
+Virtual Destructor:
+> We can declare a destructor as virtual by using virtual keyword.
+
+> Whenever any parent type pointer is pointing to the child type object, and if this object is created by using new (DMA) keyword. And whenever this parent type pointer is passing to the delete keyword as a argument for deallocation purpose. But in that case child class destructor will not be executed. In case only parent class destructor is executed.
+
+> In this case deallocation logics provided inside child class destructor may not get a chance. Hence there may be chance child specific dynamic resource remains reserved even though underlying child object is deallcoation.
+
+class Parent{
+  int* a;
+  int n;
+  public:
+    Parent(int n){
+      this->n = n;
+      a = new int[n];
+    }
+};
+
+Virtual base class/Virtual Inheritance/ Diamond Problem in inheritance/Cyclic Inheritance:
+
+Practice:
+1. is it possible to derive a class through public derivation, private derivation or protected derivation?
+ans: true
+
+2. A derived class member function  has an access to protected and public members of base class, irrespective  of whether the derived class has been derived publicly or privately?
+ans: true
+
+3. If the derived class has been derived publicly then a derived class object, can access public members of base class.
+ans: true
+
+
+4. If the derived class has been derived publicly then a derived class object, can access protected members of base class.
+ans: false
+
+5. There is no difference b/w private and protected inheritance?
+ans: False
+
+6. Creating a derived class from a base class requires fundamental changes to the base class?
+ans: false
+
+7. In private inheritance part of the base class interface can be made available to the functions outside the derived class.
+ans: True
+
+8. The size of a derived class object is equal to the sum of sizes of data members in base class and the derived class?
+ans: True
+
+9. If a base class contains a member function func(), and a dervied class doesnt contain a function with this name, an object of the derived class cant access func().
+ans: Depends upon access specifier provided the parent
+
+10. if a base class and a derived class each include a member function  with the same name, the member function of the derived clas will be  called by an object of the derived class?
+and: true
+
+11. A class D can be derived from a class C, which is derived from a class B which is derived from a class A
+ans: True
+
+12:  it is illegal to make objects of  one class as members of another class?
+ans: False
+
+Virtual Function:
+
+1. What are pure virtual functions?
+2. What is an abstract class?
+3. Is it legal to create a pointer of an abstract class?
+4. What is static binding and dynamic binding?
+5. What is a VTABLE?
+6. What is the ideal place for defining a constructor an why?
+
+class Base
+{
+  public:
+    Base()
+    {
+       ..................
+       ................... very large
+    }
+};
+Base::Base()  //non-inline
+{
+
+}
